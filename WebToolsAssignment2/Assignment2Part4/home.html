@@ -1,0 +1,129 @@
+<html> 
+<head> <link rel="stylesheet" type="text/css" href="assignment1.css">  
+ <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" /> 
+ <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
+ <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js">
+ </script> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+ <script> 
+function myFunction(){
+    var personName = document.getElementById("personName").value;
+    var accontNo = document.getElementById("accontNo").value;
+    
+    
+    if(personName === ""){
+        alert("Name cannot be empty");
+        return false;
+    }
+    if((accontNo.length === 0) || (isNaN(accontNo))){
+        alert("Account Number cannot be empty and It can contain only numbers");
+        return false;
+    }
+	}
+ $(function() {     
+ $( "#datepicker" ).datepicker();   });   
+ </script>
+ </head> 
+ <body> 
+ <div class="row">  
+	 <div class="col-md-4" id="c1">  
+	 <img src="Capture.PNG" alt="Responsive image" class="img-rounded" style="paddingtop:10px">  
+	 </div>    
+	 <div class="col-md-4" id="c2">  </div>  
+	 <div class="col-md-4" id="c3">  </div> 
+ </div>  
+<div class="first"> Claim Form PLEASE INCLUDE YOUR PET'S MEDICAL RECORDS TO HELP EXPEDITE PROCESSING. </div> 
+<div class=row> 
+	<div class="col-md-1" style="height:30px;border:1px solid #000;backgroundcolor:black;color:white">1</div> 
+	<div class="col-md-11"  style="background-color:lightgrey">General Information Please fill out this form completely. Incomplete forms will delay processing.</div> 
+</div> 
+<div class=row style="height:30px"> 
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000"><b>Personal Information</b></div> 
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000"><b>Pet Information</b></div>
+ </div>
+ <form action="RequestHeaderServlet1" method="GET" onsubmit="return validateForm(this)"> 
+ <div class=row >  
+	<div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	   <div class="col-md-2"><b>Name:</b></div>   
+	   <input type="text" name="personName" placeholder="Person Name">   
+	   </div>  
+   <div class="col-md-6" style="background:lightblue; border:1px solid #000">  
+	   <div class="col-md-2"><b>Acct No :</b></div>
+	   <input type="text"  id="accontNo" name="accontNo" placeholder="Account No">  
+	   </div> 
+   </div> 
+<div class=row >  
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	 <div class="col-md-2"><b>Address: </b></div>  
+	 <input type="text" name="personAddress" placeholder="Person Address"> 
+	 </div>   
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">  
+	 <div class="col-md-2"><b>Pet Name :</b></div>    
+	 <input type="text"  id="petName" name="petName" placeholder="Pet Name"> 
+	 </div> 
+ </div> 
+ <div class=row >  
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">  
+	 <div class="col-md-2"><b>City,State,Zip </b></div>  
+	 <input type="text" name="cityState" placeholder="City,State,Zip"> 
+	 </div>  
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">  
+	 <div class="col-md-2"><b>Breed :</b></div>   
+	 <input type="text"  id="accountNo" name="breed" placeholder="Breed"> 
+	 </div>
+ </div>
+ <div class=row >   
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	 <div class="col-md-6">  
+	 <div class="col-md-4"><b>Phone</b></div>   
+	 <input type="text" name="phone" placeholder="Phone">   
+	 </div> 
+	 <div class="col-md-6">   
+	 <div class="col-md-4"><b>Email</b></div>   
+	 <input type="text" name="email" placeholder="Email">   
+	 </div>  
+	 </div>  
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	 <div class="col-md-6"> 
+	   <div class="col-md-4"><b>Age</b></div>  
+	   <input type="text" name="age" placeholder="Age">  
+	   </div>    
+	   <div class="col-md-6">   
+	   <div class="col-md-4"><b>Gender</b></div>  
+	   <input type="text" name="gender" placeholder="Gender">  
+	   </div> 
+	   </div>
+   </div>
+<div class=row>  
+	<div class="col-md-1" style="height:30px;border:1px solid #000;backgroundcolor:black;color:white">2</div> 
+	 <div class="col-md-11"style="background-color:lightgrey">Diagnosis/Symptom Information</div>
+ </div> 
+ <div class=row>  
+	<textarea rows='3' style="margin: 0px; width: 1375px; height: 104px; border:1px solid #000" name='comments'></textarea>
+ </div>  
+<div class=row >   
+	<div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	<b>Claim related to<b>   
+	 <input type="checkbox" name="claim" value="Accident">Accident   
+	 <input type="checkbox" name="claim" value="Illness">Illness    
+	 <input type="checkbox" name="claim" value="Wellness">Wellness   
+	 </div>   
+	 <div class="col-md-6" style="background:lightblue; border:1px solid #000">    
+	 <b>Veterinian :</b>    
+	 <input type="text"  id="Veterinian" name="veterinian" placeholder="Veterinian">   
+	 </div> 
+	 </div>  
+<div class=row >   
+	<div class="col-md-6" style="background:lightblue; border:1px solid #000"> 
+
+	 <div class="col-md-2"><b>Illness Date<b></div>  
+	  <input type="text" name="datepick" id="datepicker">      
+	  </div> 
+	  <div class="col-md-6" style="background:lightblue; border:1px solid #000">   
+	  <div class="col-md-2"><b>Phone :</b></div>  
+	  <input type="text"  id="phone" name="phoneNo" placeholder="Phone No">   
+	  </div> 
+	  </div> 
+  <input type="submit" value="Submit" /> 
+  </form> 
+  </body> 
+</html> 

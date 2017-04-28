@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>BookServlet</servlet-name>
+        <servlet-class>com.neu.webtools.servlet.BookServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LaptopServlet</servlet-name>
+        <servlet-class>com.neu.webtools.servlet.LaptopServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MusicServlet</servlet-name>
+        <servlet-class>com.neu.webtools.servlet.MusicServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddandViewCartServlet</servlet-name>
+        <servlet-class>com.neu.webtools.servlet.AddandViewCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookServlet</servlet-name>
+        <url-pattern>/books.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LaptopServlet</servlet-name>
+        <url-pattern>/laptops.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MusicServlet</servlet-name>
+        <url-pattern>/music.do</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddandViewCartServlet</servlet-name>
+        <url-pattern>/AddandViewCart.do</url-pattern>
+        <url-pattern>/removeItem.do</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

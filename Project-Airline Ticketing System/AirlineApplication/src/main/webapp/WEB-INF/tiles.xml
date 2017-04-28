@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+       
+<tiles-definitions>
+
+        <definition name="base.layout" template="/WEB-INF/views/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/header.jsp" />		
+		<put-attribute name="body" value=""/>	
+		</definition>
+		
+<!-- Customer related Page View -->
+   <definition name="customer" extends="base.layout">   
+   <put-attribute name="title"
+			value="EXPEDIA - Reservation System" />
+	<put-attribute name="body" value="/WEB-INF/views/ticket.jsp" />	
+	</definition>
+	
+	
+	
+	<definition name="register" template="/WEB-INF/views/register.jsp"/>
+	
+	
+	<!-- Customer related Page View -->
+   <definition name="history" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/home.jsp" />	
+	</definition>
+	
+	<definition name="departure" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/departure.jsp" />	
+	</definition>
+	
+	<definition name="returnBooking" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/returnBooking.jsp" />	
+	</definition>
+	
+	<definition name="confirmation" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/confirmation.jsp" />	
+	</definition>
+	
+	<definition name="finalPage" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/finalPage.jsp" />	
+	</definition>
+	
+	<definition name="customerDetails" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/CustomerDetails.jsp" />	
+	</definition>
+	
+	<definition name="orderError" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/orderError.jsp" />	
+	</definition>
+	
+	<definition name="orderhistory" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/orderhistory.jsp" />	
+	</definition>
+	
+	
+	<definition name="userProfile" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/userProfile.jsp" />	
+	</definition>
+	
+	<definition name="finalPage" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/finalPage.jsp" />	
+	</definition>
+	
+	<definition name="successPage" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/successPage.jsp" />	
+	</definition>
+	
+	<definition name="registrationError" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/registrationError.jsp" />	
+	</definition>
+	
+	<definition name="error" extends="base.layout">
+      	<put-attribute name="body" value="/WEB-INF/views/errorPage.jsp" />	
+	</definition>
+	
+	<definition name="viewCustomers" extends="base.layout">
+	<put-attribute name="header" value="/WEB-INF/views/adminHeader.jsp" />
+      	<put-attribute name="body" value="/WEB-INF/views/viewCustomers.jsp" />	
+	</definition>
+	
+	<definition name="support" extends="base.layout">
+	<put-attribute name="header" value="/WEB-INF/views/SupportHeader.jsp" />
+      	<put-attribute name="body" value="/WEB-INF/views/supportBody.jsp" />	
+	</definition>
+	
+	
+	
+	<!-- Flight related Page View -->
+   <definition name="FlightDetails" extends="base.layout">
+   
+   <put-attribute name="title"
+			value="EXPEDIA - Reservation System" />
+			<put-attribute name="header" value="/WEB-INF/views/adminHeader.jsp" />
+	<put-attribute name="body" value="/WEB-INF/views/FlightDetails.jsp" />	
+	</definition>
+
+</tiles-definitions>
